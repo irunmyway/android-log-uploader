@@ -3,7 +3,7 @@ server:
 
 bvlog:
   file:
-    base-dir: logs
-    file-name-pattern: android-log-%s.txt
+    baseDir: logs
+    fileNamePattern: android-log-%s.txt
 
 

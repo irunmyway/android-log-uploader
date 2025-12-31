@@ -14,6 +14,74 @@
 
 ### 一、后端使用说明（backend）
 
+#### 方式一：使用 Docker Compose（推荐）
+
+```yaml
+version: '3.8'
+
+services:
+  android-log-backend:
+    image: bettermankind/android-log-backend:latest
+    container_name: android-log-backend
+    ports:
+      - "${SERVER_PORT:-8080}:8080"
+    environment:
+      - SERVER_PORT=${SERVER_PORT:-8080}
+      - ANDROID_LOG_FILE_BASE_DIR=${ANDROID_LOG_FILE_BASE_DIR:-logs}
+      - ANDROID_LOG_FILE_FILE_NAME_PATTERN=${ANDROID_LOG_FILE_BASE_DIR:-android-log-%s.txt}
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+```
+
+在项目根目录下使用 Docker Compose 启动：
+
+```bash
+docker-compose up -d
+```
+
+**配置说明：**
+
+可以通过环境变量或 `.env` 文件配置以下参数：
+
+| 环境变量 | 说明 | 默认值 |
+|---------|------|--------|
+| `SERVER_PORT` | 服务监听端口 | `8080` |
+| `BVLOG_FILE_BASE_DIR` | 日志文件存储目录 | `logs` |
+| `BVLOG_FILE_FILE_NAME_PATTERN` | 日志文件名模式（%s 为日期 yyyy-MM-dd） | `android-log-%s.txt` |
+
+**示例：创建 `.env` 文件自定义配置**
+
+```bash
+# .env
+SERVER_PORT=9090
+BVLOG_FILE_BASE_DIR=/data/logs
+BVLOG_FILE_FILE_NAME_PATTERN=my-log-%s.txt
+```
+
+然后启动：
+
+```bash
+docker-compose up -d
+```
+
+**查看日志：**
+
+日志文件会挂载到宿主机的 `./logs` 目录，可以直接查看：
+
+```bash
+ls logs/
+cat logs/android-log-2024-01-01.txt
+```
+
+**停止服务：**
+
+```bash
+docker-compose down
+```
+
+#### 方式二：本地运行
+
 进入 `backend` 目录：
 
 ```bash
