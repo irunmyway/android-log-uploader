@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+bvlog:
+  file:
+    base-dir: logs
+    file-name-pattern: android-log-%s.txt
+
+

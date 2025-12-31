@@ -1,0 +1,148 @@
+# ============================================
+# Maven 相关
+# ============================================
+backend/target/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+backend/pom.xml.tag
+backend/pom.xml.releaseBackup
+backend/pom.xml.versionsBackup
+backend/pom.xml.next
+backend/release.properties
+backend/dependency-reduced-pom.xml
+backend/buildNumber.properties
+backend/.mvn/timing.properties
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# ============================================
+# Gradle 相关 (Android SDK)
+# ============================================
+android-sdk/.gradle/
+android-sdk/build/
+android-sdk/.build/
+android-sdk/*/build/
+android-sdk/*/.gradle/
+android-sdk/*/build/
+android-sdk/local.properties
+android-sdk/.idea/
+android-sdk/*.iml
+android-sdk/*/*.iml
+android-sdk/*/*/*.iml
+android-sdk/.externalNativeBuild/
+android-sdk/.cxx/
+android-sdk/captures/
+android-sdk/.gradletasknamecache
+android-sdk/gradle-app.setting
+android-sdk/gradle-wrapper.jar
+android-sdk/gradle-wrapper.properties
+android-sdk/gradlew
+android-sdk/gradlew.bat
+
+# ============================================
+# IDE 相关
+# ============================================
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+.factorypath
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ============================================
+# 日志文件
+# ============================================
+logs/
+*.log
+*.log.*
+
+# ============================================
+# 编译产物
+# ============================================
+*.class
+*.jar
+!gradle-wrapper.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+# ============================================
+# 系统文件
+# ============================================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.Spotlight-V100
+.Trashes
+._*
+
+# ============================================
+# 临时文件
+# ============================================
+*.tmp
+*.temp
+*.bak
+*.cache
+*.pid
+*.seed
+*.pid.lock
+
+# ============================================
+# 操作系统相关
+# ============================================
+# Windows
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================
+# 其他
+# ============================================
+*.orig
+*.rej
+*.patch
+*.diff
+.env
+.env.local
+.env.*.local
+
